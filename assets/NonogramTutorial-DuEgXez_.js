@@ -1,4 +1,4 @@
-import{r as d,j as e,R as V}from"./react-vendor-BDlRuTEE.js";import{b as X,s as Z,c as ee,a as F}from"./index-BpxRoqmh.js";const G="#a78bfa";function b(x,v){const j=x.length,w=[];for(let k=0;k<j;k++){const l=[];let n=0;for(let p=0;p<j;p++)(v==="row"?x[k][p]:x[p][k])===1?n++:n>0&&(l.push(n),n=0);n>0&&l.push(n),l.length===0&&l.push(0),w.push(l)}return w}const te={zh:{title:"数织",tutorial:"教程",stepLabel:"步骤",step1:{emoji:"",title:"基本操作",text:`点击格子填色变黑。
+import{r as d,j as e,R as V}from"./react-vendor-BDlRuTEE.js";import{b as X,s as Z,c as ee,a as F}from"./index-BJRywSEN.js";const G="#a78bfa";function b(x,v){const j=x.length,w=[];for(let k=0;k<j;k++){const l=[];let n=0;for(let p=0;p<j;p++)(v==="row"?x[k][p]:x[p][k])===1?n++:n>0&&(l.push(n),n=0);n>0&&l.push(n),l.length===0&&l.push(0),w.push(l)}return w}const te={zh:{title:"数织",tutorial:"教程",stepLabel:"步骤",step1:{emoji:"",title:"基本操作",text:`点击格子填色变黑。
 🔢 上方=列线索 · 左侧=行线索
 ⚠️ 填错扣命！跟着 💡 先填第一行 👇`},step1Fill:"第一步：点击 💡 格子填黑（看上方🔢列线索）",step1SwitchHint:"很好！现在「点下面的 ❌ 标记」按钮切换模式",step1Mark:"现在是标记模式了，给空格打 × 排除",step1MarkDone:`× 表示「这里肯定没有图案」，用来排除！
 ✅ 你学会了填色和标记的切换！`,step2:{emoji:"",title:"一击通关",text:`看第一行线索「1 1」→ 两端各填1格，中间空开。

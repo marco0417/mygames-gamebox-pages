@@ -8,9 +8,13 @@
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', "PingFang TC", "Noto Sans TC", sans-serif; max-width: 680px; margin: 0 auto; padding: 20px; color: #333; line-height: 1.7; }
   h1 { font-size: 1.5em; border-bottom: 2px solid #E8893B; padding-bottom: 8px; }
   h2 { font-size: 1.15em; margin-top: 28px; color: #555; }
-  .lang-toggle { text-align: right; margin-bottom: 12px; }
+  .lang-toggle { text-align: right; }
   .lang-toggle button { background: #E8893B; color: #fff; border: none; padding: 4px 12px; border-radius: 14px; cursor: pointer; font-size: 0.85em; margin-left: 4px; }
   .lang-toggle button.active { background: #c57230; }
+  /* 返回游戏：顶部固定入口，避免长文底部才看到；href="./" 始终回到游戏根，iframe/新标签都可用 */
+  .page-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .back-link { display: inline-block; background: #E8893B; color: #fff; border: none; padding: 6px 14px; border-radius: 14px; cursor: pointer; font-size: 0.85em; text-decoration: none; white-space: nowrap; }
+  .back-link:hover { background: #c57230; }
   /* 三语切换：默认（含 JS 失效）显示简体；按 <html lang> 显示对应区块 */
   body > div[lang] { display: none; }
   :root[lang="zh"]    body > div[lang="zh"]    { display: block; }
@@ -25,10 +29,13 @@
 </head>
 <body>
 
-<div class="lang-toggle">
-  <button data-lang="zh" class="active" onclick="setLang('zh')">简体</button>
-  <button data-lang="zh-TW" onclick="setLang('zh-TW')">繁體</button>
-  <button data-lang="en" onclick="setLang('en')">English</button>
+<div class="page-head">
+  <a id="backLink" class="back-link" href="./">← 返回游戏</a>
+  <div class="lang-toggle">
+    <button data-lang="zh" class="active" onclick="setLang('zh')">简体</button>
+    <button data-lang="zh-TW" onclick="setLang('zh-TW')">繁體</button>
+    <button data-lang="en" onclick="setLang('en')">English</button>
+  </div>
 </div>
 
 <!-- ==================== 简体中文版 ==================== -->
@@ -254,11 +261,14 @@ For more details, see <a href="https://policies.google.com/technologies/ads" tar
 </div><!-- /English -->
 
 <script>
+  var BACK_LABELS = { 'zh': '← 返回游戏', 'zh-TW': '← 返回遊戲', 'en': '← Back to Game' };
   function setLang(l) {
     document.documentElement.lang = l;
     document.querySelectorAll('.lang-toggle button').forEach(function(b) {
       b.classList.toggle('active', b.dataset.lang === l);
     });
+    var bl = document.getElementById('backLink');
+    if (bl) bl.textContent = BACK_LABELS[l] || BACK_LABELS['en'];
   }
   (function() {
     var params = new URLSearchParams(location.search);
