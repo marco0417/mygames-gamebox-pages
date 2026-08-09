@@ -141,16 +141,23 @@
       .faq-item ul { padding-left: 18px; }
       .faq-item li { margin-bottom: 3px; }
 
-      /* 返回链接 */
+      /* 返回链接（底部） */
       .back-link {
         display: block; text-align: center;
         padding: 16px; font-size: 15px;
         font-weight: 600; color: #E8893B;
       }
+      /* 顶部返回游戏：与 privacy.html 一致，避免长文底部才看到；href="./" iframe/新标签都可用 */
+      .page-head { display: flex; justify-content: flex-start; margin-bottom: 18px; }
+      .page-head .back-link { display: inline-block; background: #E8893B; color: #fff; border: none; padding: 6px 14px; border-radius: 14px; cursor: pointer; font-size: 0.9em; text-decoration: none; white-space: nowrap; }
+      .page-head .back-link:hover { background: #c57230; }
     </style>
   </head>
   <body>
     <div class="container">
+      <div class="page-head">
+        <a class="back-link" href="./">← 返回游戏首页</a>
+      </div>
       <h1>🧠 常见问题 FAQ</h1>
       <p class="subtitle">小脑瓜 — 造你自己的伴侣 · 7 款免费益智游戏</p>
 
