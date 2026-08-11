@@ -1,0 +1,13 @@
+# AdSense / IAB app-ads.txt
+# https://support.google.com/adsense/answer/10778046
+# 声明此网站上的广告代理商。
+# 如果你在 Google AdSense 后台使用过自动广告或手动广告，必须在此声明发布商 ID。
+
+google.com, pub-XXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# ⚠️ 请将 pub-XXXXXXXXXX 替换为你的真实发布商 ID：
+#   1. 登录 https://adsense.google.com/
+#   2. 左侧菜单 → 网站 → 你的广告单元（或在「设置」→「我的网站」）
+#   3. 复制形如 pub-1234567890123456 的 ID，替换上方占位符
+#
+# 如果将来接入其他广告平台（如 AdMob / 第三方），在此追加行即可。

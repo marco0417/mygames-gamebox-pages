@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# AI 搜索引擎爬虫 — 显式放行（AEO 基础设施）
+User-agent: GPTBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: bingbot
+Allow: /
+
+# 不允许抓取的路径（如有）
+Disallow: /assets/
+Disallow: /registerSW.js
+
+Sitemap: https://marconest.cc/mygames/sitemap.xml
