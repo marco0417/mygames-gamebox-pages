@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#E8893B" />
+    <title>找牛</title>
+    <link rel="icon" href="./icon-default-192.png" sizes="192x192" type="image/png" />
+    <link rel="icon" href="./icon-default-512.png" sizes="512x512" type="image/png" />
+    <link rel="apple-touch-icon" href="./icon-default-192.png" />
+    <link rel="icon" href="./icon-default-192.png" sizes="192x192" type="image/png" />
+    <link rel="icon" href="./icon-default-512.png" sizes="512x512" type="image/png" />
+    <link rel="apple-touch-icon" href="./icon-default-192.png" />
+    <style>
+      /* ── 静态 Loading Splash（React mount 前显示，复用 .splash 视觉 ── */
+      #loading-splash {
+        position: fixed; inset: 0; z-index: 9999;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center; gap: 10px;
+        background: radial-gradient(circle at 50% 35%, #fff3e2, #FFF6EC);
+        transition: opacity .35s ease;
+        font-family: -apple-system, "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      #loading-splash.fade-out { opacity: 0; pointer-events: none; }
+      .ls-logo { width: 80px; height: 80px; border-radius: 20px; object-fit: contain; animation: ls-float 2.4s ease-in-out infinite; }
+      @keyframes ls-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+      .ls-name { font-weight: 900; letter-spacing: .22em; font-size: 26px; color: #333; }
+      .ls-tag { font-size: 13px; letter-spacing: .08em; color: #E8893B; font-weight: 800; }
+      .ls-ver { margin-top: 2px; font-size: 11px; color: #999; }
+      .ls-hint { margin-top: 12px; font-size: 12.5px; color: #bbb; animation: ls-pulse 1.6s ease-in-out infinite; }
+      @keyframes ls-pulse { 0%,100%{opacity:.5} 50%{opacity:1} }
+      .ls-company { display: flex; align-items: center; gap: 8px; margin-top: 64px; font-size: 14px; color: #999; opacity: .6; font-weight: 600; letter-spacing: .04em; }
+      .ls-company img { width: 26px; height: 26px; border-radius: 6px; }
+    </style>
+    <script type="module" crossorigin src="./assets/index-1lapLyNu.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/react-vendor-BDlRuTEE.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-DDg2wGrH.css">
+    <meta property="og:image" content="https://marconest.cc/mygames/mindmate/findacow/og-share.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://marconest.cc/mygames/mindmate/findacow/og-share.png" />
+  <meta name="description" content="找牛是一款逻辑推理网格谜题：根据行列提示，用排除法找出隐藏的小牛。每天 5 分钟锻炼逻辑思维。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="找牛" />
+  <meta property="og:description" content="找牛是一款逻辑推理网格谜题：根据行列提示，用排除法找出隐藏的小牛。每天 5 分钟锻炼逻辑思维。" />
+  <meta property="og:url" content="./" />
+  <meta property="og:site_name" content="找牛" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta name="twitter:title" content="找牛" />
+  <meta name="twitter:description" content="找牛是一款逻辑推理网格谜题：根据行列提示，用排除法找出隐藏的小牛。每天 5 分钟锻炼逻辑思维。" />
+  <link rel="canonical" href="./" />
+  <link rel="alternate" hreflang="zh" href="./" />
+  <link rel="alternate" hreflang="zh-TW" href="./" />
+  <link rel="alternate" hreflang="en" href="./" />
+  <link rel="alternate" hreflang="x-default" href="./" />
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": [
+    "WebApplication",
+    "MobileApplication",
+    "VideoGame"
+  ],
+  "name": "找牛",
+  "description": "找牛是一款逻辑推理网格谜题：根据行列提示，用排除法找出隐藏的小牛。每天 5 分钟锻炼逻辑思维。",
+  "url": "./",
+  "operatingSystem": "Web (现代浏览器), iOS, Android",
+  "applicationCategory": "GameApplication",
+  "applicationSubCategory": "脑力训练, Puzzle, Brain Training",
+  "softwareVersion": "2.0.5",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "isFamilyFriendly": true,
+  "inLanguage": [
+    "zh",
+    "zh-TW",
+    "en"
+  ],
+  "browserRequirements": "需要 JavaScript",
+  "hasPart": [
+    {
+      "@type": "VideoGame",
+      "name": "找牛 FindACow",
+      "description": "逻辑推理网格谜题——在每行每列放一头牛，相邻格子不能有牛"
+    },
+    {
+      "@type": "VideoGame",
+      "name": "数织 Nonogram",
+      "description": "经典像素画逻辑游戏——根据数字提示填充网格还原图案"
+    },
+    {
+      "@type": "VideoGame",
+      "name": "宝石滑块 Gem Slide",
+      "description": "滑块消除策略游戏——移动宝石达成目标分数"
+    },
+    {
+      "@type": "VideoGame",
+      "name": "关灯 Lights Out",
+      "description": "5×5 灯光翻转谜题——按灯切换自身与邻居，目标全灭"
+    },
+    {
+      "@type": "VideoGame",
+      "name": "管道 Pipe Flow",
+      "description": "连接水管路径规划——旋转管道让水源流向出口"
+    },
+    {
+      "@type": "VideoGame",
+      "name": "记忆翻牌 Memory",
+      "description": "配对记忆挑战——翻开卡片找到相同图案"
+    },
+    {
+      "@type": "VideoGame",
+      "name": "曼波逻辑 Mambo Logic",
+      "description": "区域划分解谜——将网格划分为指定形状和大小的区域"
+    }
+  ]
+}</script>
+<link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+  <body>
+    <script>
+      // 首屏皮肤防闪：在任何内容绘制前同步决定皮肤并挂到 body，避免先蜜梨后切换的 FOUC
+      (function(){
+        var DEFAULT_SKIN = 'default';
+        var VALID = ['default','mili','pirate','knight'];
+        function resolveSkin(){
+          try {
+            var p = new URLSearchParams(location.search).get('skin');
+            if (p && VALID.indexOf(p) >= 0) return p;
+            var s = localStorage.getItem('gamebox:skin');
+            if (s && VALID.indexOf(s) >= 0) return s;
+          } catch(e){}
+          return DEFAULT_SKIN;
+        }
+        function isDark(){
+          var t = 'light';
+          try { t = localStorage.getItem('gamebox:theme') || 'light'; } catch(e){}
+          if (t === 'auto') { try { t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; } catch(e){} }
+          return t === 'dark';
+        }
+        var skin = resolveSkin();
+        document.body.className = 'skin-' + skin + (isDark() ? ' dark' : '');
+        window.__SKIN__ = skin;
+      })();
+    </script>
+    <div id="loading-splash">
+      <img class="ls-logo" id="ls-logo" src="" alt="" draggable="false" style="display:none" />
+      <div class="ls-name">找牛</div>
+      <div class="ls-tag">每天 5 分钟 · 大脑训练</div>
+      <div class="ls-ver">v<span id="ls-ver-num">2.0.5</span></div>
+      <div class="ls-hint">准备中…</div>
+    </div>
+    <script>
+      // 静态 Splash 按皮肤切换精灵头像（与首屏 boot 脚本共用决定逻辑，不再写死 mili）
+      (function(){
+        var skin = window.__SKIN__ || 'default';
+        var map = { mili: './spirit_mili_0.webp', pirate: './spirit_pirate_0.webp', knight: './spirit_knight_0.webp' };
+        var img = document.getElementById('ls-logo');
+        if (img && map[skin]) { img.src = map[skin]; img.style.display = ''; }
+      })();
+    </script>
+    
+    <noscript>
+      <div style="max-width:600px;margin:40px auto;padding:20px;font-family:sans-serif;line-height:1.8;color:#333">
+        <h1>找牛</h1>
+        <p>找牛是一款逻辑推理网格谜题：根据行列提示，用排除法找出隐藏的小牛。每天 5 分钟锻炼逻辑思维。</p>
+        <h2>包含游戏</h2>
+        <ul><li><strong>找牛 FindACow</strong> — 逻辑推理网格谜题——在每行每列放一头牛，相邻格子不能有牛</li>
+        <li><strong>数织 Nonogram</strong> — 经典像素画逻辑游戏——根据数字提示填充网格还原图案</li>
+        <li><strong>宝石滑块 Gem Slide</strong> — 滑块消除策略游戏——移动宝石达成目标分数</li>
+        <li><strong>关灯 Lights Out</strong> — 5×5 灯光翻转谜题——按灯切换自身与邻居，目标全灭</li>
+        <li><strong>管道 Pipe Flow</strong> — 连接水管路径规划——旋转管道让水源流向出口</li>
+        <li><strong>记忆翻牌 Memory</strong> — 配对记忆挑战——翻开卡片找到相同图案</li>
+        <li><strong>曼波逻辑 Mambo Logic</strong> — 区域划分解谜——将网格划分为指定形状和大小的区域</li></ul>
+        <h2>常见问题</h2>
+        <p><strong>完全免费吗？</strong> 是的，所有游戏完全免费，无需注册或下载。</p>
+        <p><strong>需要下载吗？</strong> 不需要，打开网页即可游玩。支持安装为 PWA 应用，离线也能玩。</p>
+        <p><strong>支持哪些语言？</strong> 支持简体中文、繁体中文、English 三种语言。</p>
+        <p><strong>适合什么人群？</strong> 上班族、学生、银发族——所有喜欢休闲益智游戏的玩家。</p>
+        <p><strong>每天玩多久合适？</strong> 建议每天 5–10 分钟，循序渐进提升脑力。</p>
+        <p style="margin-top:20px"><a href="./seo-faq.html">查看完整 FAQ →</a></p>
+      </div>
+    </noscript>
+    <div id="root"></div>
+  </body>
+</html>
