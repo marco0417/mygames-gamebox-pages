@@ -1,4 +1,4 @@
-import{r as c,j as e}from"./react-vendor-BDlRuTEE.js";import{s as y,g as k,a as f}from"./index-Cbr7uziL.js";import{m as S}from"./engine-Bp68c3Sz.js";const C="#E8590C",z={zh:{title:"找不同",tutorial:"教程",step:"步骤",step1:{title:"第一步：找「不一样」的颜色",text:`屏幕上所有圆点颜色都一样，只有一颗不同。
+import{r as c,j as e}from"./react-vendor-BDlRuTEE.js";import{s as y,g as k,a as f}from"./index-DgIL7e-8.js";import{m as S}from"./engine-Bp68c3Sz.js";const C="#E8590C",z={zh:{title:"找不同",tutorial:"教程",step:"步骤",step1:{title:"第一步：找「不一样」的颜色",text:`屏幕上所有圆点颜色都一样，只有一颗不同。
 点它一下 👇`},step2:{title:"第二步：格子变多了",text:`现在变成 3×3，要扫的范围更大。
 依然只有一颗颜色不同。`},step3:{title:"第三步：差异变小了",text:`4×4 的格子，颜色差异也更细微。
 这正是正式游戏里会越来越难的挑战！`},ok:"✅ 找到了！",next:"下一步 →",restart:"↻ 重来",doneTitle:"训练完成！",doneText:"你已经掌握找不同的诀窍：扫一眼、比颜色、锁定唯一不同。",doneChat:"🎉 太棒了！准备进正式游戏大显身手吧。",startGame:"开始正式游戏",replay:"再练一次",menu:"返回主菜单"},"zh-TW":{title:"找不同",tutorial:"教程",step:"步驟",step1:{title:"第一步：找「不一樣」的顏色",text:`螢幕上所有圓點顏色都一樣，只有一顆不同。
