@@ -1,4 +1,4 @@
-import{r as n,j as e}from"./react-vendor-BDlRuTEE.js";import{s as O,a as j,g as P}from"./index-1iD2l_p2.js";import{i as U,S}from"./Board-BE4JluFa.js";const Y={zh:{title:"凑格子",tutorial:"教程",step:"步骤",step1:{title:"第一步：数字是加总",text:`左边和顶上的数字是「目标」。
+import{r as n,j as e}from"./react-vendor-BDlRuTEE.js";import{s as O,a as j,g as P}from"./index-4LXcMpg9.js";import{i as U,S}from"./Board-BE4JluFa.js";const Y={zh:{title:"凑格子",tutorial:"教程",step:"步骤",step1:{title:"第一步：数字是加总",text:`左边和顶上的数字是「目标」。
 它 = 这一行/列里所有点亮的数字加起来。
 
 跟着 💡 点两下，看数字怎么变 👇`},step2:{title:"第二步：点亮凑到目标",text:`点亮 💡 指的那一格，
