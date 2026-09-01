@@ -1,4 +1,4 @@
-import{r as l,j as e}from"./react-vendor-BDlRuTEE.js";import{s as R,a as S,g as F}from"./index-D2Kisbla.js";import{g as W}from"./engine-2xnnRlQu.js";const n=["#0EA5E9","#F59E0B","#8B5CF6"],z={zh:{title:"一眼估数",tutorial:"教程",step:"步骤",step1:{title:"第一步：看一眼，别数",text:`点阵只闪 1.5 秒就消失。
+import{r as l,j as e}from"./react-vendor-BDlRuTEE.js";import{s as R,a as S,g as F}from"./index-UYrhk19Q.js";import{g as W}from"./engine-2xnnRlQu.js";const n=["#0EA5E9","#F59E0B","#8B5CF6"],z={zh:{title:"一眼估数",tutorial:"教程",step:"步骤",step1:{title:"第一步：看一眼，别数",text:`点阵只闪 1.5 秒就消失。
 别去数！凭整体印象估个大概 👀`},step2:{title:"第二步：点变多了",text:`点数变多，闪现时间不变。
 越多的点越要抓「一片」的感觉。`},step3:{title:"第三步：满屏也不怕",text:`困难关最多 30 颗！
 别数，凭第一印象选最接近的数！`},flash:"记住点的数量！",reveal:"你估计多少个？",revealed:"真实数量",next:"下一步 →",restart:"↻ 重来",doneTitle:"训练完成！",doneText:"你已经掌握诀窍：扫一眼、凭直觉、不数数——越数越慢，整体印象最准。",doneChat:"🎯 太棒了！准备进正式游戏大显身手吧。",startGame:"开始正式游戏",replay:"再练一次",menu:"返回主菜单"},"zh-TW":{title:"一眼估數",tutorial:"教程",step:"步驟",step1:{title:"第一步：看一眼，別數",text:`點陣只閃 1.5 秒就消失。
